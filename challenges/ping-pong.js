@@ -38,3 +38,62 @@
 */
 
 // YOUR CODE HERE
+
+ var table = [{steps: 0}, null, null, null];
+
+  pingPong(table); //=> [null, {steps: 1}, null, null]
+  pingPong(table); //=> [null, null, {steps: 2}, null]
+  pingPong(table); //=> [null, null, null, {steps: 3}]
+  pingPong(table); //=> [null, null, {steps: 4}, null]
+  pingPong(table); //=> [null, {steps: 5}, null, null]
+  pingPong(table); //=> [{steps: 6}, null, null, null]
+  pingPong(table); //=> [null, {steps: 7}, null, null]
+
+  table; //=> [null, {steps: 7}, null, null]
+
+
+
+var speed=1;
+
+
+var table = [null, null, null, null];
+var length=table.length;
+var start=prompt("What step would you like to begin on?");
+var n=prompt("How many steps?");
+var tableLoc;
+var pass=((start%(length-1)));
+var direction;
+
+var nTotal=start+n;
+console.log(((start/length)%1)*length);
+var posMod=(((start/length)%1)*length);
+///when steps = nTotal end
+if(pass%2===0){direction=even/*x++*/} tablePos = posMod
+if(pass%2!==0){direction=odd/*x--*/} tablePos = length-posMod
+
+
+ 
+table.copyWithin(tablePos,table.indexOf(Object)-1)
+table[table.indexOf(Object)+1]=null;
+steps++;
+
+
+table.copyWithin(tablePos,table.indexOf(Object)+1)
+table[table.indexOf(Object)-1]=null;
+steps++;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

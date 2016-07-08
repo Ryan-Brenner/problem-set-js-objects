@@ -34,3 +34,33 @@
 */
 
 // YOUR CODE HERE
+var birthdayReminder=([
+    {
+      name: "Jack",
+      dob: "10/31/2013"
+    },
+    {
+      name: "Jill",
+      dob: "4/01/1975"
+    }
+  ]);
+
+
+
+for(i=0;i<birthdayReminder.length;i++){
+var dob = birthdayReminder[i].dob;
+var dateToConv = dob.split('/');
+var dateorder=dateToConv[2] +', ' + dateToConv[0] + ', '+dateToConv[1];
+//console.log(dateorder);
+var birthTime = new Date(dateorder).getTime();
+//console.log(birthTime);
+var timeNow =Date.now();
+//console.log(timeNow);
+//console.log(Math.floor(timeNow - birthTime)/31557600000);
+var age=Math.floor(timeNow - birthTime)/31557600000;
+var countDown=(365-(age % 1)*365.25);
+//console.log(countDown);
+console.log(birthdayReminder[i].name+"'s Birthday is in "+countDown+" days!"+"....yes we didn't round this value on purpose, precision is valued amongst my friends.")
+}
+
+

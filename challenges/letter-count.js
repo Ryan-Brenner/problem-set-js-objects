@@ -31,3 +31,79 @@
 */
 
 // YOUR CODE HERE
+
+
+///////-----Refactor------////////////
+var x=prompt("What Would You Like to Count?")
+x=x.toLowerCase().split('').sort().join().replace(/[^A-Z0-9]/ig,"");
+var Letters = {};
+var count= 1;
+function uniqueCount(x){  
+  for(var i = 0; i < x.length; i++){
+    var attrItter = x.charAt(i);
+     Letters[attrItter] = count;
+    if(x[i]===x[i+1]){
+      Letters[attrItter]=count++;
+    }else if(x[i]===x[i]){
+          count=1;
+      }
+}
+ return Letters;
+}
+uniqueCount(x);
+console.log(Letters)
+
+
+
+
+
+
+
+
+
+
+
+
+////-----Alpha-----/////////////
+
+var uniqueLetters=[];
+var str = prompt("what letters do you want analyzed?");
+var str=str.replace(/[^A-Z0-9]/ig,"").toLowerCase().split('');
+var strLength=str.length;
+
+  console.log(str);
+for(var i=0;i<strLength;i++){
+  if(uniqueLetters.indexOf(str[i])<0){
+
+    uniqueLetters.push(str[i]);
+  }};
+
+console.log(uniqueLetters);
+for(var i=0;i<uniqueLetters.length;i++){
+
+  for(var x=0;i<strLength;x++){
+
+    if(uniqueLetters[i]=str[x]){
+      //Object.uniqueLetters[i]; incriment a counter in object
+    }
+
+  
+  }
+  console.log(uniqueLetters);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
